@@ -4,8 +4,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#f4f7f5">
-	<meta name="description" content="Ingeniero industrial con experiencia en Market Intelligence y estudiante de Ciencia de Datos. Conecto análisis, negocio y tecnología para convertir datos en decisiones.">
-	<title>Perfil profesional | Market Intelligence & Data Science</title>
+	<meta name="description" content="Mateo Carrillo, ingeniero industrial con siete años de experiencia en análisis de datos, investigación de mercados e inteligencia de negocio.">
+	<title>Mateo Carrillo | Inteligencia de negocio y análisis de datos</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -321,90 +321,315 @@
 		@media (prefers-reduced-motion: reduce) {
 			*, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 		}
+
+		/* Resume sections */
+		.cv-hero { grid-template-columns: 1.1fr 0.9fr; }
+		.cv-hero h1 { font-size: clamp(42px, 5.2vw, 64px); }
+		.cv-hero .intro { max-width: 560px; }
+		.portrait-panel {
+			position: relative;
+			min-height: 390px;
+			display: grid;
+			place-items: center;
+			overflow: hidden;
+			border-radius: 8px;
+			background: #316f82;
+			background-image: linear-gradient(145deg, #316f82 0%, #1c444b 100%);
+			color: white;
+		}
+		.portrait-panel::before, .portrait-panel::after {
+			position: absolute;
+			border: 1px solid #ffffff2e;
+			border-radius: 50%;
+			content: "";
+		}
+		.portrait-panel::before { width: 310px; height: 310px; }
+		.portrait-panel::after { width: 380px; height: 380px; }
+		.portrait {
+			position: relative;
+			z-index: 1;
+			width: min(68%, 250px);
+			aspect-ratio: 1;
+			border: 6px solid #ffffff;
+			border-radius: 50%;
+			object-fit: cover;
+			box-shadow: 0 15px 40px #09272a40;
+		}
+		.portrait-note {
+			position: absolute;
+			z-index: 2;
+			bottom: 20px;
+			left: 20px;
+			padding: 10px 12px;
+			border: 1px solid #ffffff42;
+			border-radius: 4px;
+			background: #143739c9;
+			font-family: var(--mono);
+			font-size: 10px;
+		}
+		.portrait-index {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			color: #ffffffa3;
+			font-family: var(--mono);
+			font-size: 10px;
+		}
+		.cv-button { background: var(--green); border-color: var(--green); }
+		.cv-button:hover { background: #0f6656; }
+		.section-heading {
+			display: flex;
+			align-items: baseline;
+			justify-content: space-between;
+			gap: 24px;
+			margin: 0 0 30px;
+		}
+		.section-heading h2 { margin: 0; font-size: 28px; line-height: 1.25; }
+		.section-heading p { margin: 0; color: var(--muted); font-size: 12px; }
+		.resume-section { padding: 58px 0 64px; border-top: 1px solid var(--line); }
+		.resume-section .section-label { margin-bottom: 12px; }
+		.profile { grid-template-columns: 0.55fr 1.45fr; }
+		.profile-copy p { font-size: 15px; }
+		.experience-list { border-top: 1px solid var(--line); }
+		.job {
+			display: grid;
+			grid-template-columns: 190px 1fr;
+			gap: 30px;
+			padding: 26px 0 28px;
+			border-bottom: 1px solid var(--line);
+		}
+		.job-date { color: var(--green); font-family: var(--mono); font-size: 11px; line-height: 1.7; }
+		.job h3 { margin: 0 0 5px; font-size: 17px; }
+		.job-company { margin: 0 0 12px; color: var(--muted); font-size: 12px; font-weight: 700; }
+		.job ul { display: grid; gap: 8px; margin: 0; padding-left: 18px; color: var(--muted); font-size: 13px; line-height: 1.75; }
+		.highlights { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+		.highlight { min-height: 150px; padding: 20px; background: var(--panel); }
+		.highlight span { color: var(--coral); font-family: var(--mono); font-size: 10px; }
+		.highlight h3 { margin: 18px 0 8px; font-size: 14px; }
+		.highlight p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.7; }
+		.details-grid { display: grid; grid-template-columns: 1.1fr 1fr 0.8fr; gap: 34px; }
+		.detail-block { padding-top: 18px; border-top: 2px solid var(--green); }
+		.detail-block h3 { margin: 0 0 16px; font-size: 15px; }
+		.detail-block p, .detail-block li { color: var(--muted); font-size: 12px; line-height: 1.8; }
+		.detail-block p { margin: 0; }
+		.detail-block ul { display: grid; gap: 5px; margin: 0; padding-left: 17px; }
+		.skill-list { display: flex; flex-wrap: wrap; gap: 7px; }
+		.skill-list span { padding: 6px 8px; border: 1px solid var(--line); border-radius: 3px; color: var(--ink); font-family: var(--mono); font-size: 10px; }
+		.contact-band {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 30px;
+			padding: 30px;
+			border-radius: 6px;
+			background: var(--ink);
+			color: white;
+		}
+		.contact-band h2 { margin: 0 0 8px; font-size: 22px; }
+		.contact-band p { margin: 0; color: #ffffffb5; font-size: 12px; }
+		.contact-links { display: flex; flex-wrap: wrap; gap: 10px; }
+		.contact-links a { color: white; }
+		.contact-links .button.secondary { border-color: #ffffff70; color: white; }
+		.contact-links .button.secondary:hover { background: #ffffff18; }
+		.location { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 16px; color: var(--muted); font-family: var(--mono); font-size: 10px; }
+		@media (max-width: 760px) {
+			.cv-hero { grid-template-columns: 1fr; }
+			.portrait-panel { min-height: 330px; }
+			.job { grid-template-columns: 1fr; gap: 8px; }
+			.details-grid { grid-template-columns: 1fr 1fr; }
+			.contact-band { align-items: flex-start; flex-direction: column; }
+		}
+		@media (max-width: 480px) {
+			.section-heading { align-items: flex-start; flex-direction: column; gap: 8px; }
+			.section-heading h2 { font-size: 24px; }
+			.highlights, .details-grid { grid-template-columns: 1fr; }
+			.highlight { min-height: 0; }
+			.contact-band { padding: 22px; }
+			.contact-links { flex-direction: column; width: 100%; }
+		}
 	</style>
 </head>
 <body>
 	<header class="shell topbar">
 		<a class="wordmark" href="#inicio" aria-label="Inicio">
-			<span class="mark" aria-hidden="true">M.</span>
-			<span>Perfil profesional</span>
+			<span class="mark" aria-hidden="true">MC</span>
+			<span>Mateo Carrillo</span>
 		</a>
 		<nav class="nav" aria-label="Navegación principal">
-			<a href="#perfil">Perfil</a>
-			<a href="#enfoque">Enfoque</a>
+			<a href="#trayectoria">Trayectoria</a>
+			<a href="#logros">Logros</a>
+			<a href="#contacto">Contacto</a>
 		</nav>
 	</header>
 
 	<main>
-		<section class="shell hero" id="inicio" aria-labelledby="headline">
+		<section class="shell hero cv-hero" id="inicio" aria-labelledby="headline">
 			<div>
-				<p class="eyebrow">Ingeniería · inteligencia de mercado · datos</p>
-				<h1 id="headline">Entender el mercado.<br><span>Decidir con datos.</span></h1>
-				<p class="intro">Soy ingeniero industrial con experiencia en Market Intelligence y estudiante de Ciencia de Datos. Combino visión de negocio y análisis para transformar información compleja en oportunidades y decisiones accionables.</p>
+				<p class="eyebrow">Market Intelligence · datos · estrategia</p>
+				<h1 id="headline">Mateo<br><span>Carrillo.</span></h1>
+				<p class="intro">Ingeniero industrial con siete años de experiencia en análisis de datos, investigación de mercados e inteligencia de negocio en gran consumo y consultoría. Transformo información cuantitativa y cualitativa en insights y recomendaciones que impulsan decisiones estratégicas.</p>
 				<div class="actions">
-					<a class="button" href="#perfil">Conoce mi perfil <span aria-hidden="true">↓</span></a>
-					<a class="button secondary" href="#enfoque">Áreas de enfoque</a>
+					<a class="button cv-button" href="#trayectoria">Explorar trayectoria <span aria-hidden="true">↓</span></a>
+					<a class="button secondary" href="CV%20Mateo%20Carrillo.pdf" target="_blank" rel="noopener">Ver CV en PDF <span aria-hidden="true">↗</span></a>
 				</div>
+				<div class="location"><span>Bogotá D.C.</span><span>Disponibilidad para movilidad internacional</span></div>
 			</div>
-
-			<div class="visual" role="img" aria-label="Visualización conceptual de una tendencia de mercado en crecimiento">
-				<div class="visual-head">
-					<div>
-						<p class="chart-caption">De la señal a la estrategia</p>
-						<h2>Lectura de mercado</h2>
-					</div>
-					<span class="trend"><span aria-hidden="true">↗</span> INSIGHT</span>
-				</div>
-				<div class="chart" aria-hidden="true">
-					<svg viewBox="0 0 420 190" preserveAspectRatio="none">
-						<defs>
-							<linearGradient id="area" x1="0" x2="0" y1="0" y2="1">
-								<stop offset="0%" stop-color="#147d68" stop-opacity=".18" />
-								<stop offset="100%" stop-color="#147d68" stop-opacity="0" />
-							</linearGradient>
-						</defs>
-						<path class="chart-area" d="M0 155 C36 150 43 128 82 137 S130 104 164 118 S210 89 246 98 S298 62 330 76 S379 38 420 20 L420 190 L0 190Z" />
-						<path class="chart-line" d="M0 155 C36 150 43 128 82 137 S130 104 164 118 S210 89 246 98 S298 62 330 76 S379 38 420 20" />
-						<circle class="chart-dot" cx="420" cy="20" r="6" />
-					</svg>
-				</div>
-				<div class="axis-labels" aria-hidden="true"><span>OBSERVAR</span><span>ANALIZAR</span><span>ACTUAR</span></div>
-				<div class="visual-foot"><span>Perspectiva</span><strong>Datos + negocio</strong></div>
+			<div class="portrait-panel">
+				<span class="portrait-index">PERFIL / 2026</span>
+				<img class="portrait" src="mateo-carrillo.png" alt="Retrato de Mateo Carrillo">
+				<span class="portrait-note">INGENIERÍA + INTELIGENCIA DE NEGOCIO</span>
 			</div>
 		</section>
 
 		<section class="shell profile" id="perfil" aria-labelledby="profile-title">
 			<p class="section-label">01 / PERFIL</p>
 			<div class="profile-copy">
-				<h2 id="profile-title">Una mirada analítica, conectada con el negocio.</h2>
-				<p>Mi formación en ingeniería industrial me aporta una visión integral de los procesos y la toma de decisiones. Desde Market Intelligence, desarrollo una perspectiva orientada a comprender mercados, detectar patrones y traducir hallazgos en recomendaciones claras. Actualmente profundizo estas capacidades como estudiante de Ciencia de Datos, fortaleciendo mi base analítica y técnica.</p>
+				<h2 id="profile-title">Análisis riguroso, conectado con las decisiones del negocio.</h2>
+				<p>He asesorado equipos y marcas en decisiones estratégicas a partir de información de mercado, consumidor y desempeño comercial. Mi experiencia combina investigación cuantitativa y cualitativa, lectura de indicadores y comunicación de hallazgos para públicos no técnicos. Actualmente curso Ciencia de Datos para profundizar mi dominio de técnicas estadísticas y herramientas de análisis.</p>
 			</div>
 		</section>
 
-		<section class="shell" id="enfoque" aria-label="Áreas de enfoque">
-			<div class="focus">
-				<article class="focus-item">
-					<span class="focus-number">01</span>
-					<h3>Market Intelligence</h3>
-					<p>Análisis de mercados, tendencias y competidores para respaldar decisiones estratégicas.</p>
+		<section class="shell resume-section" id="trayectoria" aria-labelledby="experience-title">
+			<p class="section-label">02 / EXPERIENCIA</p>
+			<div class="section-heading">
+				<h2 id="experience-title">Trayectoria profesional</h2>
+				<p>Investigación, mercados y análisis para la toma de decisiones.</p>
+			</div>
+			<div class="experience-list">
+				<article class="job">
+					<div class="job-date">OCT 2024 — ACTUALIDAD</div>
+					<div>
+						<h3>Senior Market Intelligence Specialist</h3>
+						<p class="job-company">Nestlé de Colombia S.A.</p>
+						<ul>
+							<li>Asesoro unidades de negocio con análisis de Euromonitor y Nielsen (retail y panel de hogares), convirtiendo datos de mercado en hallazgos accionables.</li>
+							<li>Analizo participación, distribución, ventas, rotación, penetración y frecuencia para identificar oportunidades por categoría y canal.</li>
+							<li>Conecto agencias, proveedores de datos y equipos internos; desarrollo estudios de consumidor y gestiono Colombia Lab para investigación ágil.</li>
+						</ul>
+					</div>
 				</article>
-				<article class="focus-item">
-					<span class="focus-number">02</span>
-					<h3>Ciencia de Datos</h3>
-					<p>Formación en métodos de análisis para extraer valor y conocimiento de los datos.</p>
+				<article class="job">
+					<div class="job-date">AGO 2022 — OCT 2024</div>
+					<div>
+						<h3>Consultor de Investigación de Mercados</h3>
+						<p class="job-company">Quala S.A. · Consultor Flat y Senior</p>
+						<ul>
+							<li>Diseñé metodologías para validar productos, conceptos, empaques y campañas, integrando investigación cuantitativa y cualitativa.</li>
+							<li>Analicé consumidor, tendencias y desempeño de marca; presenté diagnósticos y propuestas aplicables a decisiones de negocio.</li>
+						</ul>
+					</div>
 				</article>
-				<article class="focus-item">
-					<span class="focus-number">03</span>
-					<h3>Ingeniería Industrial</h3>
-					<p>Comprensión de procesos, sistemas y oportunidades de mejora con visión integral.</p>
+				<article class="job">
+					<div class="job-date">AGO 2020 — AGO 2022</div>
+					<div>
+						<h3>Consultor de Investigación</h3>
+						<p class="job-company">Human Capital</p>
+						<ul>
+							<li>Procesé y analicé información para estudios salariales y de mercado, y lideré investigaciones ad hoc para clientes de distintas industrias.</li>
+							<li>Coordiné empresas donantes de datos para la encuesta nacional salarial y ejecuté estudios Total Rewards con más de 800 cargos.</li>
+						</ul>
+					</div>
 				</article>
+				<article class="job">
+					<div class="job-date">SEP 2019 — ABR 2020</div>
+					<div>
+						<h3>Consultor de Investigación de Mercados Junior</h3>
+						<p class="job-company">Quala S.A.</p>
+						<ul>
+							<li>Analicé mercados, desempeño de marca, competencia y distribución para desarrollar diagnósticos y estrategias de posicionamiento.</li>
+						</ul>
+					</div>
+				</article>
+				<article class="job">
+					<div class="job-date">FEB 2019 — JUL 2019</div>
+					<div>
+						<h3>Practicante Coordinador de Ingeniería e Innovación</h3>
+						<p class="job-company">CPC Agencia</p>
+						<ul>
+							<li>Hice seguimiento y análisis de indicadores, propuse mejoras y preparé informes ejecutivos para apoyar decisiones operativas.</li>
+						</ul>
+					</div>
+				</article>
+			</div>
+		</section>
+
+		<section class="shell resume-section" id="logros" aria-labelledby="highlights-title">
+			<p class="section-label">03 / RESULTADOS</p>
+			<div class="section-heading">
+				<h2 id="highlights-title">Contribuciones destacadas</h2>
+				<p>Proyectos en los que el análisis se convirtió en acción.</p>
+			</div>
+			<div class="highlights">
+				<article class="highlight">
+					<span>NESTLÉ · 2024</span>
+					<h3>Big Promo</h3>
+					<p>Diseñé y ejecuté una promoción nacional sustentada en hallazgos de análisis de consumidor, con impacto positivo en las ventas de todas las categorías.</p>
+				</article>
+				<article class="highlight">
+					<span>QUALA</span>
+					<h3>Lanzamientos de marca</h3>
+					<p>Contribuí a recuperar el liderazgo de Ricontodo y a lanzar Like, que duplicó las ventas de su categoría durante el primer año.</p>
+				</article>
+				<article class="highlight">
+					<span>QUALA</span>
+					<h3>Defensa de marca</h3>
+					<p>Apoyé la defensa de Frutiño y Boka ante la entrada de un competidor mediante análisis de competencia, distribución y mercado.</p>
+				</article>
+				<article class="highlight">
+					<span>QUALA</span>
+					<h3>Nutribela Prohialurónico</h3>
+					<p>Contribuí a identificar una necesidad del consumidor que respaldó un lanzamiento con récord histórico de ventas.</p>
+				</article>
+				<article class="highlight">
+					<span>HUMAN CAPITAL</span>
+					<h3>Total Rewards</h3>
+					<p>Ejecuté encuestas salariales nacionales con información consolidada de más de 800 cargos y distintos sectores productivos.</p>
+				</article>
+			</div>
+		</section>
+
+		<section class="shell resume-section" id="capacidades" aria-labelledby="capabilities-title">
+			<p class="section-label">04 / CAPACIDADES</p>
+			<div class="section-heading">
+				<h2 id="capabilities-title">Herramientas y formación</h2>
+			</div>
+			<div class="details-grid">
+				<div class="detail-block">
+					<h3>Competencias técnicas</h3>
+					<div class="skill-list">
+						<span>Power BI</span><span>Excel avanzado</span><span>Nielsen</span><span>Euromonitor</span><span>Visualización</span><span>Análisis cuantitativo</span><span>Análisis cualitativo</span><span>Python · en formación</span>
+					</div>
+				</div>
+				<div class="detail-block">
+					<h3>Educación y cursos</h3>
+					<p><strong>Ingeniería Industrial</strong><br>Universidad Tecnológica de Pereira · 2014–2019</p>
+					<p style="margin-top: 12px">Fundamentos de Power BI · Santander Open Academy<br>Excel avanzado · ANEIAP</p>
+				</div>
+				<div class="detail-block">
+					<h3>Idiomas</h3>
+					<p>Español · Nativo<br>Inglés · C1</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="shell resume-section" id="contacto" aria-labelledby="contact-title">
+			<div class="contact-band">
+				<div>
+					<p class="section-label">05 / CONTACTO</p>
+					<h2 id="contact-title">Conversemos.</h2>
+					<p>Disponible en Bogotá D.C. y para movilidad internacional.</p>
+				</div>
+				<div class="contact-links">
+					<a class="button cv-button" href="mailto:mateocarrillo97@gmail.com">Escríbeme</a>
+					<a class="button secondary" href="https://www.linkedin.com/in/mateo-carrillo-quiceno/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+				</div>
 			</div>
 		</section>
 	</main>
 
 	<footer class="shell">
-		<span>Ingeniería industrial × inteligencia de mercado × datos</span>
-		<span>Perfil profesional</span>
+		<span>Mateo Carrillo · Inteligencia de negocio y análisis de datos</span>
+		<a href="tel:+573136685037">+57 313 668 5037</a>
 	</footer>
 </body>
 </html>
